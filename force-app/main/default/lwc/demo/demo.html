@@ -1,0 +1,38 @@
+<template>
+   <lightning-card title="Account Information" icon-name="standard:account"> 
+<div class="slds-p-arround_small">
+<lightning-record-form 
+record-id={recordId}
+object-api-name={objectApiName}
+layout-type="Compact"
+columns="2"
+mode="edit"
+
+onsuccess={handleSuccess}
+
+>
+</lightning-record-form>
+
+
+
+
+
+
+
+
+<!--
+<lightning-record-view-form
+
+record-id={recordId}
+object-api-name={objectApiName}
+
+>
+<lightning-output-field field-name="Name"></lightning-output-field>
+<lightning-output-field field-name="Industry"></lightning-output-field>
+</lightning-record-view-form>-->
+
+
+</div>
+
+</lightning-card> 
+</template> 

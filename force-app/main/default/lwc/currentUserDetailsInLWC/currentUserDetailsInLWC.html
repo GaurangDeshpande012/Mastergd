@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Current Logged User Information">
+        <template if:true={objUser}>
+            <dl class="slds-list_horizontal slds-wrap" style="margin-left: 3%;">
+                <dt class="slds-item_label slds-truncate" title="First Name">First Name:</dt>
+                <dd class="slds-item_detail slds-truncate"><b>{objUser.FirstName}</b></dd>
+                <dt class="slds-item_label slds-truncate" title="Last Name">Last Name:</dt>
+                <dd class="slds-item_detail slds-truncate"><b>{objUser.LastName}</b></dd>
+                <dt class="slds-item_label slds-truncate" title="Full Name">Name:</dt>
+                <dd class="slds-item_detail slds-truncate"><b>{objUser.Name}</b></dd>
+                <dt class="slds-item_label slds-truncate" title="Alias">Alias:</dt>
+                <dd class="slds-item_detail slds-truncate"><b>{objUser.Alias}</b></dd>
+                <dt class="slds-item_label slds-truncate" title="Active">Is Active:</dt>
+                <dd class="slds-item_detail slds-truncate"><b>{objUser.IsActive}</b></dd>
+                
+            </dl>
+        </template>
+    </lightning-card>
+</template>

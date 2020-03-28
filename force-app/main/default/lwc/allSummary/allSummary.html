@@ -1,0 +1,18 @@
+<template>
+      <div class="slds-col slds-grid slds-wrap slds-gutters  slds-m-around_large slds-p-around_large" >
+            
+        <template if:true={Visible1}>
+                <c-flat-booked  onsubmitforflatbook={handleClick}></c-flat-booked >
+          </template>
+
+
+          <template if:true={Visible}>
+                <c-payment  onsubmitforpayment={handleClick1} ></c-payment>
+             </template>
+
+             <template if:true={Visible2}>
+                  <c-summary-screen onsendforsummaryscreen={handleClick12} ></c-summary-screen>
+              </template>
+           
+            </div>
+        </template>

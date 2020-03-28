@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/allSummary": [
+                "allSummary/allSummary.js"
+            ],
+            "c/currentUserDetailsInLWC": [
+                "currentUserDetailsInLWC/currentUserDetailsInLWC.js"
+            ],
+            "c/customFileUploader": [
+                "customFileUploader/customFileUploader.js"
+            ],
+            "c/demo": [
+                "demo/demo.js"
+            ],
+            "c/demoComp": [
+                "demoComp/demoComp.js"
+            ],
+            "c/demoNav": [
+                "demoNav/demoNav.js"
+            ],
+            "c/emailComp": [
+                "emailComp/emailComp.js"
+            ],
+            "c/flatBooked": [
+                "flatBooked/flatBooked.js"
+            ],
+            "c/navigationServiceLWCDemo": [
+                "navigationServiceLWCDemo/navigationServiceLWCDemo.js"
+            ],
+            "c/payment": [
+                "payment/payment.js"
+            ],
+            "c/summaryScreen": [
+                "summaryScreen/summaryScreen.js"
+            ],
+            "c/uSERPICKLIST": [
+                "uSERPICKLIST/uSERPICKLIST.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

@@ -1,0 +1,31 @@
+<template>
+        
+    
+        <lightning-card  title="Payment Details" > 
+                <div class="slds-p-around_medium">
+              
+           
+                <lightning-input type="text" name="Project Name" label="Project Name" ></lightning-input>
+           
+
+            
+                <lightning-combobox
+                name="progress"
+                label="Payment Type"
+                value={value}
+                placeholder="Select Payment Type"
+                options={options}
+                onchange={handleChange} ></lightning-combobox>
+           
+                <lightning-input type="date" name="input1" label="Payment  Date" ></lightning-input>
+            
+            </br>
+    
+                <lightning-button variant="brand" label="Submit" title="Brand action" onclick={handleClick1} class="slds-m-left_x-small"></lightning-button>
+            
+        </div>
+         
+    </lightning-card>
+
+   
+</template>

@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Navigation Service in Lightning Web Components" icon-name="custom:custom14">
+        <br/>
+        <lightning-card title="Navigate to Record Pages">
+            <lightning-button-group>
+                <lightning-button label="New Record Page" onclick={navigateToNewRecordPage}></lightning-button>
+                <lightning-button label="Edit Record Page" onclick={navigateToEditRecordPage}></lightning-button>
+                <lightning-button label="View Record Page" onclick={navigateToViewRecordPage}></lightning-button>
+            </lightning-button-group>
+        </lightning-card><br/>
+
+        <lightning-card title="Navigate to List Views">
+                <lightning-button-group>
+                    <lightning-button label="Account Recent View" onclick={navigateAccRecentView} ></lightning-button>
+                    <lightning-button label="Related List View" onclick={navigateRelatedListView}></lightning-button>
+                </lightning-button-group>
+        </lightning-card><br/>
+
+        <lightning-card title="Navigate to Object Page">
+                <lightning-button-group>
+                    <lightning-button label="Account Page" onclick={navigateAccObject}></lightning-button>
+                    <lightning-button label="Contact" onclick={navigateConObject}></lightning-button>
+                </lightning-button-group>
+        </lightning-card><br/>
+
+        <lightning-card title="Navigate to Lightning Component">
+            <lightning-button label="Lightning Component" onclick={navigateToComponent}></lightning-button>
+        </lightning-card><br/>
+
+        <lightning-card title="Navigate to Web Pages">
+                <lightning-button label="Web Page" onclick={navigateToWebPage}></lightning-button>
+        </lightning-card><br/>
+
+        <lightning-card title="Navigate to Standard Home Tabs">
+                <lightning-button-group>
+                    <lightning-button label="Home Page" onclick={navigateToHomePage}></lightning-button>
+                    <lightning-button label="Chatter Home Page" onclick={navigateToChatterHome}></lightning-button>
+                </lightning-button-group>
+        </lightning-card>
+    </lightning-card>
+</template>

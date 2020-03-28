@@ -1,0 +1,37 @@
+<template>
+    
+   
+          
+    <lightning-card  title="Availability Status">
+           <div class="slds-grid slds-gutters" style="margin-left: 1.5rem">
+                       <div class="slds-col">
+
+           <template if:true={statusValues.data}>
+                   <lightning-combobox name="status"
+                                       value={statusValue}
+                                       placeholder={status}
+                                       options={statusValues.data.values}
+                                       onchange={handleChange}
+                                       {status}
+                                        >
+                                        
+                 
+                 </lightning-combobox>
+           </template><br/>
+                 </div>
+                 <div class="slds-col" style="margin-top: 1.5rem">
+
+                 <img src={picurl} />
+                 </div>
+
+           
+           
+                
+                  
+           
+     </div>
+       </lightning-card>
+
+    
+     
+</template>
