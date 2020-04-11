@@ -30,6 +30,9 @@
             "c/flatBooked": [
                 "flatBooked/flatBooked.js"
             ],
+            "c/helloWorld": [
+                "helloWorld/helloWorld.js"
+            ],
             "c/lwcCovidTracker": [
                 "lwcCovidTracker/lwcCovidTracker.js"
             ],
