@@ -6,6 +6,9 @@
             "c/allSummary": [
                 "allSummary/allSummary.js"
             ],
+            "c/coboboxsample": [
+                "coboboxsample/coboboxsample.js"
+            ],
             "c/currentUserDetailsInLWC": [
                 "currentUserDetailsInLWC/currentUserDetailsInLWC.js"
             ],
@@ -26,6 +29,9 @@
             ],
             "c/flatBooked": [
                 "flatBooked/flatBooked.js"
+            ],
+            "c/lwcCovidTracker": [
+                "lwcCovidTracker/lwcCovidTracker.js"
             ],
             "c/navigationServiceLWCDemo": [
                 "navigationServiceLWCDemo/navigationServiceLWCDemo.js"

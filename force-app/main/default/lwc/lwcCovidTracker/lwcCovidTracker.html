@@ -1,0 +1,65 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+            This Covid Tracker updates daily. Here you will find data of all countries. 
+        </h3>
+        <div slot="footer">
+                
+        </div>
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered slds-table_striped">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div title="country">Country</div>
+                    </th>
+                    <th scope="col" class="greyClass">
+                        <div title="confirmedCase">New Confirmed Cases</div>
+                    </th>
+                    <th scope="col" class="greyClass">
+                        <div title="totalcase">Total Confirmed Cases</div>
+                    </th>
+                    <th scope="col" class="redClass">
+                        <div title="newD">New Death</div>
+                    </th>
+                    <th scope="col" class="redClass">
+                        <div title="totalD">Total Death</div>
+                    </th>
+                    <th scope="col" class="greenClass">
+                        <div title="recovered">New Recovered</div>
+                    </th>
+                    <th scope="col" class="greenClass">
+                        <div title="newRecovered">Total Recovered</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            <template for:each={covidList} for:item="co">
+                    <tr key={co.key}>
+                        <th scope="col">
+                            {co.Country}
+                        </th>
+                        <th scope="col" class="greyClass">
+                            {co.NewConfirmed}
+                        </th>
+                        <th scope="col" class="greyClass">
+                            {co.TotalConfirmed}
+                        </th>
+                        <th scope="col" class="redClass">
+                            {co.NewDeaths}
+                        </th>
+                        <th scope="col" class="redClass">
+                            {co.TotalDeaths}
+                        </th>
+                        <th scope="col" class="greenClass">
+                            {co.NewRecovered}
+                        </th>
+                        <th scope="col" class="greenClass">
+                            {co.TotalRecovered}
+                        </th>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>
