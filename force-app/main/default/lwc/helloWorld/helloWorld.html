@@ -1,6 +1,10 @@
 <template>
     <lightning-card  title="Hello">
-    <div> Welcome {dyanamicGreeting} </div>
+    <div class="greeting-class"> Welcome {dyanamicGreeting} </div>
+
+    <div style="color: white; background:black;"> Inline CSS Style </div>
+
+    <div > Style with Element Tag</div>
     <lightning-input label='Greeting' onchange={greetingchangehandler}></lightning-input>
 </lightning-card>
 </template>

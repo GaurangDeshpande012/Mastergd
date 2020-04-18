@@ -47,6 +47,9 @@
             ],
             "c/uSERPICKLIST": [
                 "uSERPICKLIST/uSERPICKLIST.js"
+            ],
+            "c/conditionalRenderingElement": [
+                "conditionalRenderingElement/conditionalRenderingElement.js"
             ]
         }
     },
