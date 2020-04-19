@@ -50,6 +50,9 @@
             ],
             "c/conditionalRenderingElement": [
                 "conditionalRenderingElement/conditionalRenderingElement.js"
+            ],
+            "c/simpleCalculator": [
+                "simpleCalculator/simpleCalculator.js"
             ]
         }
     },

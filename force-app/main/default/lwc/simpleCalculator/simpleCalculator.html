@@ -1,0 +1,56 @@
+<template>
+    
+<lightning-card title="Simple Calculator" icon-name="standard:formula">
+<lightning-layout multiple-rows>
+<lightning-layout-item size="12" padding="around-medium">
+
+<lightning-input type="number" name="FirstNumber" onchange={NumberchangeHandler}></lightning-input>
+
+</lightning-layout-item>
+
+<lightning-layout-item  size="12" padding="around-medium">
+
+    <lightning-input type="number" name="SecondNumber" onchange={NumberchangeHandler}></lightning-input>
+    
+    </lightning-layout-item>
+    
+
+    <lightning-layout-item size="12" padding="around-medium">
+<lightning-button-group>
+<lightning-button label="ADD" icon-name="utility:add" icon-position="right" onclick={ADDHandler}></lightning-button>
+<lightning-button label="SUB" icon-name="utility:dash" icon-position="right" onclick={SUBHandler}></lightning-button>
+<lightning-button label="MUL" icon-name="utility:close" icon-position="right" onclick={MULHandler}></lightning-button>
+<lightning-button label="DIV" icon-name="utility:magicwand" icon-position="right" onclick={DIVHandler}></lightning-button>
+
+</lightning-button-group>
+
+    </lightning-layout-item>
+ <lightning-layout-item  size="12" padding="around-medium">
+<lightning-formatted-text value={currentResult} ></lightning-formatted-text>
+</lightning-layout-item>
+
+<lightning-layout-item  size="12" padding="around-medium">
+    <lightning-input type="checkbox" label="Show Pervious Result" onchange={showPreviousResultToggle}></lightning-input>
+</lightning-layout-item>
+
+<lightning-layout-item  size="12" padding="around-medium">
+    <template if:true={showPreviousResult}>
+   <ul>
+    <template iterator:result={previousResultlst}>
+    <li key={result.value}>
+<div if:true={result.first} class="slds-border_top"></div>
+        <lightning-formatted-text value={result.value} ></lightning-formatted-text>
+        <div if:true={result.last} class="slds-border_bottom"></div>
+    </li>
+
+    </template>
+   </ul>
+    </template>
+</lightning-layout-item>
+
+
+</lightning-layout>
+
+</lightning-card>
+
+</template>
