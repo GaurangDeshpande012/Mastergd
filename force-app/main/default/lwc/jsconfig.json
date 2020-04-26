@@ -6,8 +6,14 @@
             "c/allSummary": [
                 "allSummary/allSummary.js"
             ],
+            "c/bmiCalculator": [
+                "bmiCalculator/bmiCalculator.js"
+            ],
             "c/coboboxsample": [
                 "coboboxsample/coboboxsample.js"
+            ],
+            "c/conditionalRenderingElement": [
+                "conditionalRenderingElement/conditionalRenderingElement.js"
             ],
             "c/currentUserDetailsInLWC": [
                 "currentUserDetailsInLWC/currentUserDetailsInLWC.js"
@@ -42,17 +48,14 @@
             "c/payment": [
                 "payment/payment.js"
             ],
+            "c/simpleCalculator": [
+                "simpleCalculator/simpleCalculator.js"
+            ],
             "c/summaryScreen": [
                 "summaryScreen/summaryScreen.js"
             ],
             "c/uSERPICKLIST": [
                 "uSERPICKLIST/uSERPICKLIST.js"
-            ],
-            "c/conditionalRenderingElement": [
-                "conditionalRenderingElement/conditionalRenderingElement.js"
-            ],
-            "c/simpleCalculator": [
-                "simpleCalculator/simpleCalculator.js"
             ]
         }
     },
