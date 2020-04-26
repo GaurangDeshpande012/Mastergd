@@ -4,5 +4,11 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "**/.sfdx": true
-  }
+  },
+  "salesforcedx-vscode-core.show-cli-success-msg": false,
+  "githubPullRequests.remotes": [
+    "origin",
+    "upstream",
+    "gauranggdeshpande@gmail.co"
+  ]
 }
