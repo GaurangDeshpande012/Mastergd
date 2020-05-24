@@ -1,12 +1,18 @@
 <template>
 <lightning-card title="Meeting Room">
     <ul>
-   <h>hiiiiiiiiiiiiiiii</h>
-   <h1>hhhhhhhhhhhhhhhhhhhhh</h1>
-   <h1>hhhhhhhhhhhhhhhhhhhhh</h1>
+   
     <template for:each={meetingRoomsInfo} for:item="room">
 <li key={room.roomName} style="padding:10px;">
-<c-meeting-room meeting-room-info={room} show-room-info></c-meeting-room>
+<c-meeting-room  show-room-info>
+
+    <lightning-tile label={room.roomName}  slot="roonInfo">
+        <p class="slds-truncate" title={room.roomCapacity}>Romm Capacity:{ room.roomCapacity}</p>
+    </lightning-tile>
+
+<div>Additional Markup will go in unnamed slot</div>
+
+</c-meeting-room>
 
 </li>
 </template>

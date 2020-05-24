@@ -2,9 +2,13 @@
 
     <template if:true={showRoomInfo}>
     <div class="slds-p-around_medium lgc-bg">
-        <lightning-tile label={meetingRoomInfo.roomName} href="/path/to/somewhere">
+
+
+        <slot name="roonInfo"></slot>
+        <slot></slot>
+      <!-- <lightning-tile label={meetingRoomInfo.roomName} href="/path/to/somewhere">
             <p class="slds-truncate" title={meetingRoomInfo.roomCapacity}>Romm Capacity:{ meetingRoomInfo.roomCapacity}</p>
-        </lightning-tile>
+        </lightning-tile>--> 
     </div>
 </template>
 </template>

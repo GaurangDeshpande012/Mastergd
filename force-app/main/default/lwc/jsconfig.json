@@ -62,6 +62,12 @@
             ],
             "c/meetingRooms": [
                 "meetingRooms/meetingRooms.js"
+            ],
+            "c/publicMethodChild": [
+                "publicMethodChild/publicMethodChild.js"
+            ],
+            "c/publicMethodParent": [
+                "publicMethodParent/publicMethodParent.js"
             ]
         }
     },
