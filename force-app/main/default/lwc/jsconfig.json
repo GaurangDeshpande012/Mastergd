@@ -68,6 +68,9 @@
             ],
             "c/publicMethodParent": [
                 "publicMethodParent/publicMethodParent.js"
+            ],
+            "c/lifecycleDemo": [
+                "lifecycleDemo/lifecycleDemo.js"
             ]
         }
     },
