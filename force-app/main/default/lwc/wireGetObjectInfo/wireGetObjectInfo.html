@@ -1,0 +1,116 @@
+<template>
+    <lightning-card title="WireGetObjectInfo" icon-name="custom:custom67">
+
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                padding="around-small">
+                <div class="slds-m-horizontal_medium">
+                    <lightning-input value={objectApiNameInputValue} placeholder="Enter object API name"
+                        onchange={objectNameChange} label="Search"></lightning-input>
+                    <p class="slds-p-vertical_small">
+                        <lightning-button label="Get Object Info" onclick={handleBtnClick}></lightning-button>
+                    </p>
+                    <template if:true={objectInfo.data}>
+                        <div class="scroller">
+                            <pre>{objectInfoStr}</pre>
+                        </div>
+                        <lightning-combobox name="fieldApiName" label="Select Field To Get Informtion" value=""
+                            placeholder="Select Field Api Name" options={fieldOptions} onchange={fieldNameChange}
+                            required>
+                        </lightning-combobox>
+                        <p class="slds-p-vertical_small">
+                            <lightning-button label="Get Field Info" onclick={handleFieldBtnClick}>
+                            </lightning-button>
+                        </p>
+                        <template if:true={fieldInformation}>
+                            <div class="scroller">
+                                <pre>{fieldInformation}</pre>
+                            </div>
+                        </template>
+                        <lightning-combobox name="childRelationShipApiName"
+                            label="Select Relationship To Get Informtion" value=""
+                            placeholder="Select child Relationship Api Name" options={childOptions}
+                            onchange={childRelationNameChange} required>
+                        </lightning-combobox>
+                        <p class="slds-p-vertical_small">
+                            <lightning-button label="Get Child Relationship Info" onclick={handleChildRelationBtnClick}>
+                            </lightning-button>
+                        </p>
+                        <template if:true={childRelationshipInformation}>
+                            <div class="scroller">
+                                <pre>{childRelationshipInformation}</pre>
+                            </div>
+                        </template>
+                    </template>
+                    <template if:true={objectInfo.error}>
+                        <c-error-panel errors={objectInfo.error}></c-error-panel>
+                    </template>
+                   <!-- <c-view-source source="lwc/wireGetObjectInfo" slot="footer">
+                        Get metadata about a specific object. The metadata includes fields,
+                        child relationships, record type, and theme. Enter an object name
+                        and click the "Get Object Info" button to see the recipe in action.
+                    </c-view-source>-->
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_left">
+                    <p>Total Number of Fields:-
+                        <lightning-formatted-number value={numberOfFileds}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Custom Fields:-
+                        <lightning-formatted-number value={totalCustomField}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Standard Fields:-
+                        <lightning-formatted-number value={totalStandardField}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Record Types:-
+                        <lightning-formatted-number value={numberOfRecordTypes}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Child relationship:-
+                        <lightning-formatted-number value={numberOfChildRelationship}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Text(String) Fields:-
+                        <lightning-formatted-number value={totalStringField}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Reference Fields:-
+                        <lightning-formatted-number value={totalReferenceField}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Picklist Fields:-
+                        <lightning-formatted-number value={totalPicklistField}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Currency Fields:-
+                        <lightning-formatted-number value={totalCurrencyField}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Double Fields:-
+                        <lightning-formatted-number value={totalDoubleField}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Address Fields:-
+                        <lightning-formatted-number value={totalAddressFields}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of TextArea Fields:-
+                        <lightning-formatted-number value={totalTextAreaFields}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of DateTime Fields:-
+                        <lightning-formatted-number value={totalDateTimeFields}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Integer Fields:-
+                        <lightning-formatted-number value={totalIntegerFields}></lightning-formatted-number>
+                    </p>
+                    <p>Total Number of Updateable Fields:-
+                        <lightning-formatted-number value={totalUpdateableField}></lightning-formatted-number>
+                    </p>
+                    <p>Object key Prefix:- {ObjectkeyPrefix}</p>
+                    <lightning-input type="checkbox" label="Searchable" name="Searchable" checked={isSearchable}
+                        disabled></lightning-input>
+                    <lightning-input type="checkbox" label="Queryable" name="Queryable" checked={isQueryable} disabled>
+                    </lightning-input>
+                    <lightning-input type="checkbox" label="Updateable" name="Updateable" checked={isUpdateable}
+                        disabled>
+                    </lightning-input>
+
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

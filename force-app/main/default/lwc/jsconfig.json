@@ -71,6 +71,9 @@
             ],
             "c/lifecycleDemo": [
                 "lifecycleDemo/lifecycleDemo.js"
+            ],
+            "c/wireGetObjectInfo": [
+                "wireGetObjectInfo/wireGetObjectInfo.js"
             ]
         }
     },
