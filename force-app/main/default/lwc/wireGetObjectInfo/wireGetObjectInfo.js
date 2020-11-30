@@ -3,7 +3,7 @@ import { LightningElement , wire, track } from 'lwc';
 import { getObjectInfo } from 'lightning/uiObjectInfoApi';
 
 export default class WireGetObjectInfo extends LightningElement {
-    objectApiNameInputValue = 'Account';
+    objectApiNameInputValue = 'sobject';
     objectApiName;
     @track objectInfo;
 
